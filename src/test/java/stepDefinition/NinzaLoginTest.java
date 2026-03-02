@@ -3,6 +3,7 @@ package stepDefinition;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -31,6 +32,7 @@ public class NinzaLoginTest {
 	@Then("Verify the homepage")
 	public void verify_the_homepage() {
 	    System.out.println("Homepage Displayed");
+	    driver.quit();
 	}
 
 }
