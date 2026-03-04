@@ -1,4 +1,4 @@
-package stepDefinition;
+package StepDefinitions;
 
 import java.time.Duration;
 import java.util.Set;
@@ -23,9 +23,9 @@ public class AmazonAddToCartTest {
 	   driver.get("https://www.amazon.in/?ref_=icp_country_from_us");
 	   parentId = driver.getWindowHandle();
 	}
-	@When("User searches for Headphones")
-	public void user_searches_for_headphones() {
-		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Headphones", Keys.ENTER);
+	@When("User searches for {string}")
+	public void user_searches_for_headphones(String serachItem) {
+		driver.findElement(By.id("twotabsearchtextbox")).sendKeys(serachItem, Keys.ENTER);
 	}
 	@When("User selects the first product")
 	public void user_selects_the_first_product() {
