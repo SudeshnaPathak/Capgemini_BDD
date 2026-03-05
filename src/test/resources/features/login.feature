@@ -6,7 +6,8 @@ Feature: feature to test login functionality
     Given browser is launched
     And user is on login page
     When user enters "<username>" and "<password>" and clicks on login button
-    Then user is navigated to home page
+    Then user is navigated to home page 
+    And user performs logout
 
 #Data driven testing using parameterization    
  Examples:
