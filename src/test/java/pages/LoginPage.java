@@ -8,7 +8,7 @@ public class LoginPage {
 	
 	protected WebDriver driver;
 	private By txt_username = By.id("username");
-	private By txt_password = By.id("password");
+	private By txt_password = By.id("inputPassword");
 	private By btn_login = By.xpath("//button[@type='submit']");
 	
 	public LoginPage(WebDriver driver)
