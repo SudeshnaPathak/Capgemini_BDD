@@ -25,10 +25,10 @@ public class LoginDemoStepPageFactory {
 	public void browser_is_launched() {
 		System.out.println("Page Factory Implementations");
 		driver = new EdgeDriver();
-		login = new LoginPageFactory(driver);
-		home = new HomePageFactory(driver);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+		login = new LoginPageFactory(driver);
+		home = new HomePageFactory(driver);
 	}
 	
 	@When("user is on login page")
