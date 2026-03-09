@@ -1,4 +1,4 @@
-package StepsForHooks;
+package StepDefinitions;
 
 import static org.testng.Assert.assertTrue;
 
@@ -60,13 +60,13 @@ public class HooksDemoSteps {
 		assertTrue(home.verifyHomePage());
 	}
 	
-	@AfterStep //after every step
+	@AfterStep("@regression") //after every step
 	public void afterSteps()
 	{
 		System.out.println("I am inside After step");
 	}
 	
-	@After("@regression") //After every Scenario
+	@After() //After every Scenario
 	public void tearDown()
 	{
 		driver.quit();
