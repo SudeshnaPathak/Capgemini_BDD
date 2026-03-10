@@ -5,7 +5,8 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(features = {"src/test/resources/background/BackgroundDemo.feature"},
 glue = "StepDefinitions",
+plugin = {"json:target/jsonReports/cucumber.json"},
 dryRun = false)
-public class RunnerForBackground extends AbstractTestNGCucumberTests{
+public class TestRunnerForBackground extends AbstractTestNGCucumberTests{
 
 }

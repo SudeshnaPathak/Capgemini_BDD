@@ -1,5 +1,7 @@
 package StepDefinitions;
 
+import static org.testng.Assert.assertFalse;
+
 import java.time.Duration;
 import java.util.Set;
 
@@ -42,7 +44,7 @@ public class AmazonAddToCartTest {
 	}
 	@Then("Product should be added to the cart-verify text of added to cart using isDisplayed")
 	public void product_should_be_added_to_the_cart_verify_text_of_added_to_cart_using_is_displayed() {
-		driver.findElement(By.xpath("//h1[contains(text(),'Added to cart')]")).isDisplayed();
+		assertFalse(driver.findElement(By.xpath("//h1[contains(text(),'Added to cart')]")).isDisplayed()); //Intentional false test case
 		driver.quit();
 	}
 
